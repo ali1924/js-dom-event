@@ -8,15 +8,33 @@
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
-    <head>
         <h1>JS DOM Event</h1>
-    </head>
-    <main>
+ 
+        <section>
         <!-- onclick event -->
         <!-- onclick="value" -->
         <button onclick="console.log('ALi')">Click Me</button>
         <button onclick="console.log('add onclick event')">OK</button>
-    </main>
+        <!--  -->
+        <br>
+
+        </section>
+        <section>
+            <!-- Option 1 -->
+        <button onclick="document.body.style.backgroundColor='red'">Make 
+        Red</button>
+            <!-- Option-2 -->
+            <button onclick="makeYellow()">Make Yellow</button>
+            <!-- Option--3  outside js file-->
+            <br>
+            <button id="make-blue" >Make Blue</button>
+        </section>
+   
+        <script>
+            function makeYellow(){
+                document.body.style.backgroundColor='yellow';
+            }
+        </script>
     <!-- JS inner link -->
     <script src="js/jsevents.js"></script>
 </body>
