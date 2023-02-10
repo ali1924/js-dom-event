@@ -19,6 +19,7 @@
         <br>
 
         </section>
+        <!-- diffrent ways to use add onclick event  -->
         <section>
             <!-- Option 1 -->
         <button onclick="document.body.style.backgroundColor='red'">Make 
@@ -28,12 +29,24 @@
             <!-- Option--3  outside js file-->
             <br>
             <button id="make-blue" >Make Blue</button>
+            <!-- Option-4 -->
+            <!-- Option-4 make-purple buttone event outside html file -->
+            <button id="make-purple">Make Purple</button>
         </section>
-   
+        <!-- diffrent ways to use add addeventListener  --> 
+        <!-- Option-1 addeventListener using id -->
+        <button id="make-pink">Make Pink</button>
+        <!-- Option-2 -->
+        <button id="make-cyan">Make Cyan</button>
+        <!-- option-3 final-->
+        <button id="make-green">Make Green</button>
+        <!-- Option-4 final -->
+        <button id="make-magenta">Make Magenta</button>
         <script>
             function makeYellow(){
                 document.body.style.backgroundColor='yellow';
             }
+
         </script>
     <!-- JS inner link -->
     <script src="js/jsevents.js"></script>

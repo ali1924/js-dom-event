@@ -19,3 +19,24 @@ console.log(makePurpleButtonId);
 makePurpleButtonId.onclick=function makePurple(){
     document.body.style.backgroundColor='purple';
 }
+// <!-- diffrent ways to use add addeventListener  --> 
+// Option-1
+const makeCyanButtonId=document.getElementById('make-cyan');
+makeCyanButtonId.addEventListener('click', makeCyan);
+function makeCyan(){
+    document.body.style.backgroundColor='cyan';
+}
+// Option-2
+const makeGreenButtonId=document.getElementById('make-green');
+makeGreenButtonId.addEventListener('click', function makeGreen(){
+    document.body.style.backgroundColor='green';
+});
+// Option-3
+document.getElementById('make-black').addEventListener('click',function(){
+    document.body.style.backgroundColor='black';
+})
+// Option-4
+document.getElementById('make-gold').addEventListener('click',function makeGold(){
+    document.body.style.backgroundColor='gold';
+})
+
