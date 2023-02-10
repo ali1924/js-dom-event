@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble DOM</title>
+    <style>
+        body{
+            border:5px solid green;
+        }
+        section{
+            border:5px solid red;
+        }
+        ul{
+            border:5px solid blue;
+        }
+        li{
+            border:5px solid magenta;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>Exploring Event Bubble</h1>
+    <section id="ul-section">
+        <ul id="ul-id">
+            <li id="item-1">Item one</li>
+            <li id="item-2">Item Two</li>
+            <li id="item-3">Item three</li>
+            <li id="item-4">Item four</li>
+            <li id="item-5">Item five</li>
+            <li id="item-6">Item Six</li>
+        </ul>
+    </section>
+    <script>
+        // item-2
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log('Item 2');
+            event.stopPropagation();
+        })
+        // ul-id
+        document.getElementById('ul-id').addEventListener('click',function(event){
+            console.log('ul-id');
+            event.stopPropagation();
+        })
+        //ul-section
+        document.getElementById('ul-section').addEventListener('click',function(event){
+            console.log('ul-section');
+            event.stopPropagation();
+        })
+        // body
+        document.getElementById('body').addEventListener('click',function(event){
+            console.log('body');
+            event.stopPropagation();
+        })
+
+    </script>
+</body>
+</html>

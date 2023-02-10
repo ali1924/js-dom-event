@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble practice</title>
+</head>
+<body id="body">
+    <h1>Bubble DOM practice</h1>
+    <section id="ul-section">
+        <ul id="ul-id">
+            <li id="item-1">C++</li>
+            <li id="item-2">Java</li>
+            <li id="item-3">HTML</li>
+            <li id="item-4">CSS</li>
+            <li id="item-5">JS</li>
+        </ul>
+    </section>
+    <script>
+        // ul
+        document.getElementById('ul-id').addEventListener('click',function(event){
+            console.log('ul-id');
+            event.stopPropagation();
+        })
+        // item-1
+        document.getElementById('item-1').addEventListener('click',function(event){
+            console.log('C++');
+            event.stopPropagation();
+        })
+        // ul-section
+        document.getElementById('ul-section').addEventListener('click',function(event){
+            console.log('ul-section');
+            event.stopPropagation();
+        })
+        // body
+        document.getElementById('body').addEventListener('click',function(event){
+            console.log('body');
+            event.stopPropagation();
+        })
+        
+    </script>
+</body>
+</html>
