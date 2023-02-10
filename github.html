@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="secret-info">My secret Information</h1>
+    <input id="input-text" type="text" placeholder="Enter any text">
+    <button id="delete-btn" disabled>Delete</button>
+
+    <script>
+        // document.getElementById('input-text').addEventListener('keyup',function(event){
+        //     const textInput=event.target.value;
+        //     const deleteButton=document.getElementById('delete-btn');
+        //     if(textInput==='delete'){
+        //         deleteButton.removeAttribute('disabled');
+        //     }
+        //     else{
+        //         deleteButton.setAttribute('disabled',true);
+        //     }
+        // })
+        // document.getElementById('delete-btn').addEventListener('click',function(){
+        //     document.getElementById('secret-info').style.display='none';
+        // })
+        // event add in input-text
+        document.getElementById('input-text').addEventListener('keyup',function(event){
+            const text=event.target.value;
+            const deleteButton1=document.getElementById('delete-btn');
+            if(text==='ali'){
+                deleteButton1.removeAttribute('disabled');
+            }
+            else{
+                deleteButton1.setAttribute('disabled',true);
+            }
+        })
+    </script>
+</body>
+
+</html>
