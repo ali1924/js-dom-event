@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+</head>
+<body>
+    <h1>Explore Event Delegate</h1>
+    <section>
+        <ul id="ul">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Cumque, odit accusantium!</li>
+            <li class="item">Numquam, delectus eos.</li>
+            <li class="item">Commodi, dignissimos molestiae.</li>
+            <li class="item">Beatae, non laboriosam.</li>
+        </ul>
+    </section>
+    <!-- Button add list -->
+    <section>
+        <button id="add-list-in-ul">addList</button>
+    </section>
+    <script>
+        const items=document.getElementsByClassName('item');
+        console.log(items);
+        // for(const item of items){
+        //     console.log(item.innerText);
+        // }
+        // for(const item of items){
+        //     item.addEventListener('click',function(event){
+        //         // console.log(event.target.parentNode);
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+        document.getElementById('add-list-in-ul').addEventListener('click',function(){
+            const ulList=document.getElementById('ul');
+            const list=document.createElement('li');
+            list.innerText='List added';
+            ulList.appendChild(list);
+        })
+        for(const item of items){
+            item.addEventListener('click',function(event){
+                // console.log(event.target.parentNode);
+                event.target.parentNode.removeChild(event.target);
+            })
+        }
+    </script>
+</body>
+</html>
